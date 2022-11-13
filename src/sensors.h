@@ -1,15 +1,17 @@
+#ifndef SENSORS_H
+#define SENSORS_H
+
 #include "Adafruit_BNO055.h"
 #include "Arduino.h"
-#include "SPI.h"
 #include "Pixy2.h"
-
-Adafruit_BNO055 bno055 = Adafruit_BNO055(-1, 0x28);
+#include "SPI.h"
 
 #define NUM_balls 16
 #define NUM_lines 25
 
-double SIN16[16] = {0.0, 0.383,  0.707,  0.924,  1.0,  0.924,  0.707,  0.383,
-                    0,   -0.383, -0.707, -0.924, -1.0, -0.924, -0.707, -0.383};
+const double SIN16[16] = {0.0,   0.383,  0.707,  0.924,  1.0,    0.924,
+                          0.707, 0.383,  0.0,    -0.383, -0.707, -0.924,
+                          -1.0,  -0.924, -0.707, -0.383};
 
 class BALL {
  public:
@@ -43,14 +45,12 @@ class GYRO {
   int dir0;
 };
 
-
-class CAMERA{
-  public:
-    int x,y,h,w;
-    int color;
-    bool cansee;
-    void get();
+class CAMERA {
+ public:
+  int x, y, h, w;
+  int color;
+  bool cansee;
+  void get();
 };
 
-CAMERA goal[2];
-CAMERA ball;
+#endif

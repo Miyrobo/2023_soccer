@@ -1,3 +1,5 @@
+#ifndef MOTOR_H
+#define MOTOR_H
 #include <Arduino.h>
 
 class MOTOR{
@@ -12,3 +14,5 @@ class MOTOR{
     const int _angle[4]={-45,45,135,-135};  //モーター取り付け角度
     const float _corr[4]={1,1,1,1};         //回転補正
 };
+
+#endif

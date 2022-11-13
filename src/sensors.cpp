@@ -1,5 +1,7 @@
 #include "sensors.h"
 
+Adafruit_BNO055 bno055 = Adafruit_BNO055(-1, 0x28);
+
 void BALL::get() {  //ボールの位置取得
   x = 0;
   y = 0;
