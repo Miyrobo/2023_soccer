@@ -1,6 +1,7 @@
 #include "Adafruit_BNO055.h"
 #include "Arduino.h"
 #include "SPI.h"
+#include "Pixy2.h"
 
 Adafruit_BNO055 bno055 = Adafruit_BNO055(-1, 0x28);
 
@@ -41,3 +42,15 @@ class GYRO {
  private:
   int dir0;
 };
+
+
+class CAMERA{
+  public:
+    int x,y,h,w;
+    int color;
+    bool cansee;
+    void get();
+};
+
+CAMERA goal[2];
+CAMERA ball;

@@ -1,6 +1,6 @@
 #include "sensors.h"
 
-void BALL::get() {
+void BALL::get() {  //ボールの位置取得
   x = 0;
   y = 0;
   for (int i = 0; i < NUM_balls; i++) {
