@@ -27,10 +27,10 @@ class BALL {
 
 class LINE {
  public:
-  int value[NUM_lines];
-
+  bool isOnline = 0;  //ライン上か
+  int dir;            //コートの方向
+  void get();         //状態取得
  private:
-  int pin[NUM_lines];
 };
 
 class GYRO {
@@ -49,7 +49,7 @@ class CAMERA {
  public:
   int x, y, h, w;
   int color;
-  bool cansee;
+  bool canSee;
   void get();
 };
 
