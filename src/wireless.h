@@ -1,4 +1,8 @@
-//無線通信
+//無線通信 & コントロールパネル
+
+#include "Arduino.h"
+
+HardwareSerial Serial_ESP(Serial1);   //ESPとのシリアル番号 
 
 class WIRELESS {
  public:
@@ -7,3 +11,10 @@ class WIRELESS {
 
  private:
 };
+
+
+class ESP32{
+  public:
+    void readmode(int s);
+}esp;
+

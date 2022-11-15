@@ -1,8 +1,9 @@
 //便利機能等
-
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
 #include "Arduino.h"
 
-#define TIMER_MAX 50    //タイマーの数
+#define TIMER_MAX 20    //タイマーの数
 
 class TIMER{
   public:
@@ -21,3 +22,4 @@ void TIMER::reset(int n){
   s_tim[n]=millis();
 }
 
+#endif

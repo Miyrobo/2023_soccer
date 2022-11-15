@@ -1,6 +1,9 @@
 #include "sensors.h"
 
+HardwareSerial Serial_line(Serial2);   //ラインに用いるUARTの番号
+
 Adafruit_BNO055 bno055 = Adafruit_BNO055(-1, 0x28);
+
 
 void BALL::get() {  //ボールの位置取得
   x = 0;
@@ -36,4 +39,10 @@ void GYRO::get() {
 void GYRO::reset() {  //攻め方向リセット
   get();
   dir0 = ypr[0];
+}
+
+void LINE::get(){
+  if(Serial_line.available()){
+
+  }
 }
