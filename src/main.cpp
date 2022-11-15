@@ -7,7 +7,6 @@
 BALL ball;
 
 void setup() {
-  
 }
 
 void loop() {

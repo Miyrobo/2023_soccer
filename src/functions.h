@@ -3,23 +3,21 @@
 #define FUNCTIONS_H
 #include "Arduino.h"
 
-#define TIMER_MAX 20    //タイマーの数
-
 class TIMER{
   public:
-    void reset(int n);
-    unsigned long get(int n);
+    void reset();
+    unsigned long get();
   private:
-    unsigned long s_tim[TIMER_MAX];
+    unsigned long s_tim;
 };
 
 
-unsigned long TIMER::get(int n){
-  return millis()-s_tim[TIMER_MAX];
+unsigned long TIMER::get(){
+  return millis()-s_tim;
 }
 
-void TIMER::reset(int n){
-  s_tim[n]=millis();
+void TIMER::reset(){
+  s_tim=millis();
 }
 
 #endif

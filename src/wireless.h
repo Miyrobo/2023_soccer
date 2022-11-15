@@ -15,6 +15,10 @@ class WIRELESS {
 
 class ESP32{
   public:
-    void readmode(int s);
+    void change_mode(int s);    //ESP送信モード変更
+    void read();
+    bool toggle;
+  private:
+
 }esp;
 
