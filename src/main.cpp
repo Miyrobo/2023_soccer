@@ -7,6 +7,7 @@
 BALL ball;
 
 void setup() {
+  buzzer.windowsXP();
 }
 
 void loop() {
