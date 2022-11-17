@@ -31,6 +31,7 @@ class LINE {
   int dir;            //コートの方向
   void get();         //状態取得
  private:
+  int _pin[NUM_lines]={};
 };
 
 class GYRO {

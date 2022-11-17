@@ -5,6 +5,8 @@
 
 #define BUZZER_PIN 11;
 
+#define length 200
+
 class TIMER{
   public:
     void reset();
@@ -30,6 +32,7 @@ class SOUND{
     unsigned int freq_now;
 
     void windowsXP();    //windowsXP起動音
+    void tondemowonders();
   private:
     const int _pin = BUZZER_PIN;
     int _Hz[7]={1077,1209,1357,1438,1614,1812,2033};
@@ -57,6 +60,68 @@ void SOUND::windowsXP(){
   play(640,200);    //ミ♭(低)
   play(1281,200);  //ミ♭(高)
   play(960,600);   //シ♭
+}
+
+void SOUND::tondemowonders(){
+  play(_Hz[6]/2,length);
+  play(_Hz[4]/2,length/2);
+  play(_Hz[4]/2,length/2);
+  play(_Hz[6]/2,length);
+  play(_Hz[4]/2,length/2);
+  play(_Hz[4]/2,length/2);
+  play(_Hz[2]/2,length);
+  play(_Hz[4]/2,length);
+  play(_Hz[2],length);
+  play(_Hz[1],length*2);
+  play(_Hz[6]/2,length/2);
+  play(_Hz[5]/2,length/2);
+  play(_Hz[4]/2,length);
+  play(_Hz[5]/2,length*2);
+  play(_Hz[4]/2,length);
+  delay(length);
+  play(_Hz[1]/2,length);
+  play(_Hz[4]/2,length);
+  play(_Hz[1]/2,length);
+  play(_Hz[4]/2,length);
+  play(_Hz[5]/2,length);
+  play(_Hz[6]/2,length);
+  play(_Hz[0],length);
+  play(_Hz[1],length);
+  play(_Hz[6]/2,length);
+  play(_Hz[5]/2,length);
+  play(_Hz[4]/2,length);
+  play(_Hz[6]/2,length*4);
+  delay(length*2);
+
+  play(_Hz[6]/2,length);
+  play(_Hz[4]/2,length);
+  play(_Hz[6]/2,length);
+  play(_Hz[4]/2,length);
+  play(_Hz[2]/2,length);
+  play(_Hz[4]/2,length);
+  play(_Hz[2],length);
+  play(_Hz[1],length*2);
+  play(_Hz[6]/2,length/2);
+  play(_Hz[5]/2,length/2);
+  play(_Hz[4]/2,length);
+  play(_Hz[5]/2,length);
+  play(_Hz[5]/2,length);
+  play(_Hz[4]/2,length);
+  delay(length);
+  play(_Hz[6]/2,length);
+  play(_Hz[0],length);
+  play(_Hz[0],length*2);
+  play(_Hz[6]/2,length);
+  play(_Hz[0],length);
+  play(_Hz[0],length);
+  play(_Hz[5]/2,length);
+  play(_Hz[2],length*2);
+  play(_Hz[1],length);
+  play(_Hz[6]/2,length);
+  play(_Hz[1],length*2);
+  play(_Hz[1],length);
+  play(_Hz[2],length*2);
+
 }
 
 #endif
